@@ -76,14 +76,12 @@ exports = module.exports = function (everyauth) {
 
   everyauth.facebook.AuthCallbackError = AuthCallbackError;
 
-
-  // TODO Don't make devs define this every time
-  everyauth.facebook.everyauth = everyauth;
-
   return everyauth.facebook;
 };
 
 function AuthCallbackError (req) {
+  Error.call(this);
+  Error.captureStackTrace(this, arguments.callee);
   this.name = 'AuthCallbackError';
   var parsedUrl = url.parse(req.url, true);
   this.message = parsedUrl.query.error_description;
