@@ -85,6 +85,5 @@ function AuthCallbackError (req) {
   this.name = 'AuthCallbackError';
   var parsedUrl = url.parse(req.url, true);
   this.message = parsedUrl.query.error_description;
-  this.stack = (new Error).stack;
 }
 util.inherits(AuthCallbackError, Error);
