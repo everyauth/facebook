@@ -1,7 +1,7 @@
 var util = require('util');
 var url = require('url');
 
-exports = module.exports = function (everyauth) {
+module.exports = function (everyauth) {
   if (! everyauth.oauth2) {
     everyauth.oauth2 = require("everyauth-oauth2")(everyauth);
   }
