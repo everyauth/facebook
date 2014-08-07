@@ -43,8 +43,8 @@ module.exports = function (everyauth) {
       var next = seqValues.next;
       return next(err);
     } else if (err.extra) {
-      var facebookResponse = err.extra.res
-        , serverResponse = seqValues.res;
+      var facebookResponse = err.extra.res;
+      var serverResponse = seqValues.res;
       serverResponse.writeHead(
           facebookResponse.statusCode
         , facebookResponse.headers);
