@@ -4,7 +4,7 @@
   "description": "Facebook login plugin for everyauth",
   "main": "index.js",
   "dependencies": {
-    "everyauth-oauth2": "0.x"
+    "everyauth-oauth2": "0.0.x"
   },
   "peerDependencies": {
     "everyauth": "0.5.x"
